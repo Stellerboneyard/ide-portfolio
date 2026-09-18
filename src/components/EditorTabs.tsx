@@ -27,7 +27,7 @@ export function EditorTabs() {
                 e.stopPropagation();
                 ide.closeTab(tab.id);
               }}
-              className="rounded-sm p-0.5 text-vs-fg-muted opacity-0 hover:bg-white/10 hover:text-white group-hover:opacity-100"
+              className="rounded-sm p-0.5 text-vs-fg-muted opacity-100 hover:bg-white/10 hover:text-white sm:opacity-0 sm:group-hover:opacity-100"
               aria-label={`Close ${tab.name}`}
             >
               <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
