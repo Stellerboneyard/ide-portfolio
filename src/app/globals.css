@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* VS Code "Dark+" palette */
+  --vs-bg: #1e1e1e;
+  --vs-bg-elevated: #252526;
+  --vs-bg-sidebar: #252526;
+  --vs-bg-activitybar: #333333;
+  --vs-bg-titlebar: #3c3c3c;
+  --vs-bg-statusbar: #007acc;
+  --vs-bg-tab-active: #1e1e1e;
+  --vs-bg-tab-inactive: #2d2d2d;
+  --vs-border: #2b2b2b;
+  --vs-fg: #cccccc;
+  --vs-fg-muted: #858585;
+  --vs-fg-active: #ffffff;
+  --vs-accent: #007acc;
+  --vs-accent-bright: #3794ff;
+  --vs-selection: #094771;
+  --vs-folder-icon: #dcb67a;
+  --vs-red: #f14c4c;
+  --vs-green: #89d185;
+  --vs-yellow: #cca700;
+
+  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-vs-bg: var(--vs-bg);
+  --color-vs-bg-elevated: var(--vs-bg-elevated);
+  --color-vs-bg-sidebar: var(--vs-bg-sidebar);
+  --color-vs-bg-activitybar: var(--vs-bg-activitybar);
+  --color-vs-bg-titlebar: var(--vs-bg-titlebar);
+  --color-vs-bg-statusbar: var(--vs-bg-statusbar);
+  --color-vs-bg-tab-active: var(--vs-bg-tab-active);
+  --color-vs-bg-tab-inactive: var(--vs-bg-tab-inactive);
+  --color-vs-border: var(--vs-border);
+  --color-vs-fg: var(--vs-fg);
+  --color-vs-fg-muted: var(--vs-fg-muted);
+  --color-vs-fg-active: var(--vs-fg-active);
+  --color-vs-accent: var(--vs-accent);
+  --color-vs-accent-bright: var(--vs-accent-bright);
+  --color-vs-selection: var(--vs-selection);
+  --color-vs-folder-icon: var(--vs-folder-icon);
+  --color-vs-red: var(--vs-red);
+  --color-vs-green: var(--vs-green);
+  --color-vs-yellow: var(--vs-yellow);
+  --font-mono: var(--font-mono);
+  --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--vs-bg);
+  color: var(--vs-fg);
+  font-family: var(--font-sans), -apple-system, "Segoe UI", sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--vs-selection);
+}
+
+/* thin VS-Code-style scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.xterm-viewport {
+  background: transparent !important;
 }
