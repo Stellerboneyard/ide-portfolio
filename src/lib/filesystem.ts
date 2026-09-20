@@ -133,9 +133,9 @@ export const focus: FocusArea[] = [
     status: "ongoing",
   },
   {
-    name: "RBI Grade B prep",
-    detail: "Paused for now, not abandoned.",
-    status: "paused",
+    name: "Python & AI/ML foundations",
+    detail: "Math fundamentals first, then applied projects.",
+    status: "ongoing",
   },
 ];
 `;
